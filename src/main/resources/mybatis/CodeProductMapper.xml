@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzn.mybatisplus.codegenerator.entity.CodeProductMybatisDao">
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.lzn.mybatisplus.codegenerator.entity.CodeProduct">
+                    <id column="id" property="id" />
+                    <result column="create_date" property="createDate" />
+                    <result column="modify_date" property="modifyDate" />
+                    <result column="name" property="name" />
+                    <result column="mobile" property="mobile" />
+                    <result column="bulid_date" property="bulidDate" />
+                    <result column="company_name" property="companyName" />
+                    <result column="shop_goods" property="shopGoods" />
+                    <result column="other_info" property="otherInfo" />
+                    <result column="status" property="status" />
+                    <result column="operator" property="operator" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+        id, create_date AS createDate, modify_date AS modifyDate, name, mobile, bulid_date AS bulidDate, company_name AS companyName, shop_goods AS shopGoods, other_info AS otherInfo, status, operator
+        </sql>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        <!-- -->
+        delete from test_code_product
+        where
+                id = #{ id }
+    </delete>
+
+    <insert id="insert" parameterType="com.lzn.mybatisplus.codegenerator.entity.CodeProduct">
+        <!-- -->
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into test_code_product (
+                create_date,                modify_date,                name,                mobile,                bulid_date,                company_name,                shop_goods,                other_info,                status,                operator        )
+        values (
+                #{ createDate},                #{ modifyDate},                #{ name},                #{ mobile},                #{ bulidDate},                #{ companyName},                #{ shopGoods},                #{ otherInfo},                #{ status},                #{ operator}        )
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.lzn.mybatisplus.codegenerator.entity.CodeProduct">
+        <!-- -->
+        update test_code_product
+        set
+               create_date = #{ createDate} ,               modify_date = #{ modifyDate} ,               name = #{ name} ,               mobile = #{ mobile} ,               bulid_date = #{ bulidDate} ,               company_name = #{ companyName} ,               shop_goods = #{ shopGoods} ,               other_info = #{ otherInfo} ,               status = #{ status} ,               operator = #{ operator}         where
+              id = #{ id }
+    </update>
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        <!-- -->
+        select
+        <include refid="Base_Column_List" />
+        from test_code_product
+        where id = #{ id }
+    </select>
+
+    <select id="countForPage" parameterType="map" resultType="Long">
+        <!-- -->
+        select
+         count(*)
+        from
+        test_code_product
+        where 1=1
+        <if test="beginDate != null and beginDate != ''">
+            and create_date <![CDATA[>=]]>  #{beginDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  create_date <![CDATA[<=]]> #{endDate}
+        </if>
+    </select>
+
+    <select id="listForPage" parameterType="map" resultType="com.elog.fs.admin.codeproduct.export.CodeProductVO">
+        <!-- -->
+        select
+        <include refid="Base_Column_List" />
+        from
+        test_code_product
+        where 1=1
+        <if test="beginDate != null and beginDate != ''">
+            and create_date <![CDATA[>=]]>  #{beginDate}
+        </if>
+        <if test="endDate != null and endDate != ''">
+            and  create_date <![CDATA[<=]]> #{endDate}
+        </if>
+        limit #{start}, #{limit}
+    </select>
+
+</mapper>
