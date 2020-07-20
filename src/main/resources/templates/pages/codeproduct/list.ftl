@@ -7,6 +7,7 @@
 <link href="${base}/omui/css/elegant/om-all.css" rel="stylesheet" type="text/css" />
 <link href="${base}/css/admin.css" rel="stylesheet" type="text/css" />
 
+
 <script type="text/javascript" src="${base}/js/jquery-1.7.1.js"></script>
 <script type="text/javascript" src="${base}/js/HForm.js"></script>
 <script type="text/javascript" src="${base}/My97DatePicker/WdatePicker.js"></script>
@@ -44,7 +45,7 @@
 		$('#buttonbar').omButtonbar({
 			btns : [{label:"导出Excel",
 						id:"addbutton" ,
-						icons : {left : '${base}/static/omui/images/export.png'},
+						icons : {left : '${base}/omui/images/export.png'},
 						onClick:function()
 							{
 								exportUtil({

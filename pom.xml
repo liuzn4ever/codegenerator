@@ -41,6 +41,14 @@
             <version>1.3.2</version>
         </dependency>
 
+        <!-- aspectj -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--es-->
+
         <!-- lombok 简化get/set 方法 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
