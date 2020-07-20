@@ -1,5 +1,6 @@
 package com.lzn.mybatisplus.codegenerator.utils.redis;
 
+
 import org.springframework.data.redis.connection.DataType;
 
 import java.util.List;

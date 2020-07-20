@@ -1,9 +1,10 @@
-package com.lzn.codegenerate.export;
+package com.lzn.mybatisplus.codegenerator.export;
 
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import com.lzn.mybatisplus.codegenerator.utils.export.ExportRowCreator;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -12,7 +13,7 @@ import java.util.Date;
 /**
  *  视图对象
  * @author: liuzhinan
- * @date 2020-07-17
+ * @date 2020-07-20
  * */
 @Getter
 @Setter

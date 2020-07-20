@@ -1,11 +1,13 @@
-package com.lzn.codegenerate.export;
+package com.lzn.mybatisplus.codegenerator.export;
 
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
-import com.lzn.codegenerate.utils.ParameterUtil;
-import com.lzn.codegenerate.utils.export.AbstractCSVExportService;
-import com.lzn.codegenerate.dao.CodeProductMybatisDao;
+import com.lzn.mybatisplus.codegenerator.utils.ParameterUtil;
+import com.lzn.mybatisplus.codegenerator.utils.export.AbstractCSVExportService;
+import com.lzn.mybatisplus.codegenerator.dao.CodeProductMybatisDao;
+import com.lzn.mybatisplus.codegenerator.export.CodeProductVO;
+import com.lzn.mybatisplus.codegenerator.utils.entity.*;
 
 import javax.annotation.Resource;
 import java.util.Iterator;
@@ -18,7 +20,7 @@ import java.util.Map;
  * </p>
  *
  * @author liuzhinan
- * @since 2020-07-17
+ * @since 2020-07-20
  */
 @Component
 public class CodeProductExportService extends AbstractCSVExportService<CodeProductVO> {

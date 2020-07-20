@@ -1,10 +1,14 @@
 package com.lzn.mybatisplus.codegenerator.dao;
 
-import com.elog.fs.admin.codeproduct.entity.CodeProduct;
-import com.elog.fs.admin.codeproduct.export.CodeProductVO;
+import com.lzn.mybatisplus.codegenerator.entity.CodeProduct;
+import com.lzn.mybatisplus.codegenerator.export.CodeProductVO;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Map;
 
+@Mapper
 public interface CodeProductMybatisDao  {
     /**
      *  根据主键删除数据库的记录, test_code_product

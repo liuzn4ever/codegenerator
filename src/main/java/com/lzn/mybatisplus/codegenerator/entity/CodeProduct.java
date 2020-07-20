@@ -10,7 +10,7 @@ import lombok.ToString;
  * 数据库表名 test_code_product
  *
  * @author liuzhinan
- * @date 2020-07-17
+ * @date 2020-07-20
  */
 @Getter
 @Setter

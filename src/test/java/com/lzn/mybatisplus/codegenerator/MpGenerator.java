@@ -84,9 +84,9 @@ public class MpGenerator {
             }
         });
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("");
-        dsc.setPassword("");
-        dsc.setUrl("");
+        dsc.setUsername("ddjtest");
+        dsc.setPassword("3VzqJsMJ");
+        dsc.setUrl("jdbc:mysql://192.168.202.128/sfddj?useSSL=false");
         mpg.setDataSource(dsc);
 
         // 策略配置

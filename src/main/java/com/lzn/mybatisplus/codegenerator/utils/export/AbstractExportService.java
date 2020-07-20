@@ -1,8 +1,8 @@
 package com.lzn.mybatisplus.codegenerator.utils.export;
 
 
-import com.lzn.codegenerate.utils.DateUtils;
-import com.lzn.codegenerate.utils.redis.IRedisService;
+import com.lzn.mybatisplus.codegenerator.utils.DateUtils;
+import com.lzn.mybatisplus.codegenerator.utils.redis.IRedisService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

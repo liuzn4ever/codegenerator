@@ -4,16 +4,15 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title></title>
-<link href="${base}/static/omui/css/elegant/om-all.css" rel="stylesheet" type="text/css" />
-<link href="${base}/static/admin/css/admin.css" rel="stylesheet" type="text/css" />
+<link href="${base}/omui/css/elegant/om-all.css" rel="stylesheet" type="text/css" />
+<link href="${base}/css/admin.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="${base}/static/js/jquery-1.7.1.js"></script>
-<script type="text/javascript" src="${base}/static/js/HForm.js"></script>
-<script type="text/javascript" src="${base}/static/My97DatePicker/WdatePicker.js"></script>
-<script type="text/javascript" src="${base}/static/omui/js/operamasks-ui.min.js"></script>
-<script type="text/javascript" src="${base}/static/omui/js/common.js"></script>
-<script type="text/javascript" src="${base}/static/bui/js/common.js"></script>
-<script type="text/javascript" src="${base}/static/admin/js/export.js"></script>
+<script type="text/javascript" src="${base}/js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="${base}/js/HForm.js"></script>
+<script type="text/javascript" src="${base}/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="${base}/omui/js/operamasks-ui.min.js"></script>
+<script type="text/javascript" src="${base}/omui/js/common.js"></script>
+<script type="text/javascript" src="${base}/js/export.js"></script>
 
 <script type="text/javascript">
 

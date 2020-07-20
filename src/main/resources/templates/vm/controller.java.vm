@@ -3,15 +3,13 @@ package ${package.Controller};
 
 import ${package.Entity}.${entity};
 import ${package.Service}.${table.serviceName};
-import com.lzn.codegenerate.export.${table.entityName}VO;
-import com.lzn.codegenerate.utils.entity.OmuiPage;
-import com.lzn.codegenerate.utils.export.ExportMethod;
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}VO;
+import com.lzn.mybatisplus.codegenerator.export.${table.entityName}ExportService;
+import com.lzn.mybatisplus.codegenerator.utils.entity.*;
+import com.lzn.mybatisplus.codegenerator.utils.export.*;
 import org.apache.commons.beanutils.ConvertUtils;
-import org.elogside.modules.mapper.JsonMapper;
-import org.elogside.modules.utils.Exceptions;
-import org.elogside.modules.utils.MyStringUtils;
-import com.lzn.codegenerate.utils.ParameterUtil;
-import com.lzn.codegenerate.utils.entity.GridDataModel;
+import com.lzn.mybatisplus.codegenerator.utils.ParameterUtil;
+import com.lzn.mybatisplus.codegenerator.utils.entity.GridDataModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -51,11 +49,11 @@ public class ${table.controllerName}{
     @ExportMethod(serviceClass = ${entity}ExportService.class, memo = "明细导出")
     public String searchList(ServletRequest request,@ModelAttribute("page")  OmuiPage page){
         try {
-            Map<String,Object> searchParam =	 ServletUtils.getParametersStartingWith(request, "filter_");
+            Map<String,Object> searchParam =	 ParameterUtil.getParametersStartingWith(request, "filter_");
             GridDataModel<${entity}VO> gd =${table.entityPath}Service.findByPage(searchParam, page);
             return JsonMapper.nonDefaultMapper().toJson(gd);
         } catch (Exception e) {
-            logger.error(Exceptions.getStackTraceAsString(e));
+            logger.error("查询出错了",e);
             return JsonMapper.nonDefaultMapper().toJson(new Resp("false", e.getMessage()));
         }
     }

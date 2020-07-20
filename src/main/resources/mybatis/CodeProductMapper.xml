@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lzn.mybatisplus.codegenerator.entity.CodeProductMybatisDao">
+<mapper namespace="com.lzn.mybatisplus.codegenerator.dao.CodeProductMybatisDao">
         <!-- 通用查询映射结果 -->
         <resultMap id="BaseResultMap" type="com.lzn.mybatisplus.codegenerator.entity.CodeProduct">
                     <id column="id" property="id" />
@@ -71,7 +71,7 @@
         </if>
     </select>
 
-    <select id="listForPage" parameterType="map" resultType="com.elog.fs.admin.codeproduct.export.CodeProductVO">
+    <select id="listForPage" parameterType="map" resultType="com.lzn.mybatisplus.codegenerator.export.CodeProductVO">
         <!-- -->
         select
         <include refid="Base_Column_List" />
